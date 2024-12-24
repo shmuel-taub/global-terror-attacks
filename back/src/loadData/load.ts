@@ -1,19 +1,25 @@
 import fs from 'fs'
 import { connectDB } from '../config/configDB';
-import { appendToAttackSchema } from '../DL/controllers';
+import { appendToAll } from '../DL/controlers/CreateControlers';
 connectDB()
 
-const fileName = 'data.json'
-fs.readFile(`${__dirname}/${fileName}`, 'utf8', (err, data) => {
+const fileName = 'data1.json' // Big
+// const fileName = 'data2.json'  // Little
+fs.readFile(`${__dirname}/${fileName}`, 'utf8', async (err, data) => {
     if (err) {
       console.error(err);
       return;
     }
     let attacks = JSON.parse(data)
     for (let attack of attacks){
-        appendToAttackSchema(attack)
+      // if (!Number(attack.imonth))
+      //   console.log(attack)
+      //   minmonth = Math.min(minmonth, Number(attack.imonth))
+      // maxmonth = Math.max(maxmonth, Number(attack.imonth))
+        await appendToAll(attack)
         // console.log(attack.gname)
     }
+    // console.log(minmonth, maxmonth)
     // attacks = attacks.filter(() => {
 
     // })

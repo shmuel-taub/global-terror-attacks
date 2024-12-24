@@ -1,3 +1,14 @@
+import { Document } from "mongoose";
+export type Value = string | number
+export type ValueType = StringConstructor | NumberConstructor
+
+// export interface Statistics extends Document {
+//     attacksNum: number;
+//     sumKill: number;
+//     sumWound: number;
+// }
+
+
 export interface IAttackDTO {
     
     // eventid: number;
@@ -14,8 +25,8 @@ export interface IAttackDTO {
     // target1: string;
     gname: string;
     // weaptype1_txt: string;
-    // nkill: number;
-    // nwound: number;
+    nkill: number;
+    nwound: number;
     // nperps: null,
     // summary: null
     

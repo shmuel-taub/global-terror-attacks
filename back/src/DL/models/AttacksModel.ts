@@ -1,12 +1,12 @@
 import mongoose, {Document, Schema} from "mongoose";
 
-import { IAttackDTO } from "../types";
+import { IAttackDTO } from "../../types";
 
 // interface Attack extends IAttackDTO, Document;
-type Attack = IAttackDTO & Document;
+export type Attack = IAttackDTO & Document;
 
 
-const AttackSchema = new Schema<Attack>({
+export const AttackSchema = new Schema<Attack>({
     // eventid: number;
     iyear: {type: Number},
     imonth: {type: Number},
@@ -21,8 +21,8 @@ const AttackSchema = new Schema<Attack>({
     // target1: string;
     gname: {type: String},
     // weaptype1_txt: string;
-    // nkill: number;
-    // nwound: number;
+    nkill: {type: Number},
+    nwound: {type: Number},
     // nperps: null,
     // summary: null
 })

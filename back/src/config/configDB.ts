@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 import 'dotenv/config'
+import { TerrorismManagmentError } from "../Utilities/customErrors";
 
 export async function connectDB() {
     try {
         console.log(process.env.DB_URL)
-        await mongoose.connect(process.env.DB_URL!)
+        if (!process.env.DB_URL) throw new TerrorismManagmentError('Failed to load db url')
+        await mongoose.connect(process.env.DB_URL )
         console.log("Connected to the DB")
     }
     catch (e) {
