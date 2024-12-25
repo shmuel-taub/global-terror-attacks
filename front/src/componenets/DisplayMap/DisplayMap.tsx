@@ -18,7 +18,6 @@ const ChangeCenter: React.FC<ChangeCenterProps> = ({ position }) => {
 
 export default function DisplayMap({markers, height}: PropType) {
   const center = markers.length ? markers[0].location : [51.505, -0.09] as [number, number]
-  // console.log(markers, center)
   return (
     <MapContainer style={{height: height}} center={center} zoom={13} scrollWheelZoom={false}>
       <ChangeCenter position={{lat: center[0], lng: center[1]}}></ChangeCenter>

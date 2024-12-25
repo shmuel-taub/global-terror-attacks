@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import  {useEffect} from 'react'
 import './Search.css'
 import { useNavigate } from 'react-router-dom'
 import RouteOptions from '../RouteOptions/RouteOptions'

@@ -1,11 +1,10 @@
-import {useNavigate, Route, Routes} from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
 import DateTrends from '../DateTrends/DateTrends'
 import DeadliestAttacks from '../DeadliestAttacks/DeadliestAttacks'
 import DeadliestRegionsOfGroup from '../DeadliestRegionsOfGroup/DeadliestRegionsOfGroup'
 import GroupsByYear from '../GroupsByYear/GroupsByYear'
 import MostCasultyRegions from '../MostCasultyRegions/MostCasultyRegions'
 import TopGroups from '../TopGroups/TopGroups'
-import React from 'react'
 
 export default function RouteOptions() {
   return (

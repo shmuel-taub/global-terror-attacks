@@ -1,9 +1,8 @@
-import React from 'react'
 
 export default function DeadliestRegionsOfGroup() {
   return (
     <div>
-      DeadliestRegionsOfGroup
+      Not implemented
     </div>
   )
 }

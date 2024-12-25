@@ -1,17 +1,17 @@
-import React, { useRef, useState } from "react";
+import  { useRef, useState } from "react";
 import useGet from "../../hooks/useGet";
 import { BASE_URL } from "../../config/config";
 import DisplayGraph from "../DisplayGraph/DisplayGraph";
 import { IBar } from "../../Types";
 const URL = BASE_URL + 'api/relationships/groups-by-year/?'
-const YEARS_URL = BASE_URL + '/api/getters/get-years'
-const GROUPS_URL = BASE_URL + '/api/getters/get-groups'
+// const YEARS_URL = BASE_URL + '/api/getters/get-years'
+// const GROUPS_URL = BASE_URL + '/api/getters/get-groups'
 
 export default function GroupsByYear() {
   const [filter, setFilter] = useState("year");
   const inputVal = useRef("");
   const {data, getData, errMsg} = useGet<IBar>()
-  const {data: optionList, getData: refreshList} = useGet<string>()
+  const {data: optionList, /*getData: refreshList*/} = useGet<string>()
   function handleSend() {
     getData(URL, `${filter}=${inputVal.current}&${filter === 'year' ? 'limit=10' : ''}`)
   }

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import  {  useState } from "react";
 import { BASE_URL } from "../../config/config";
 import useGet from "../../hooks/useGet";
 import DisplayGraph from "../DisplayGraph/DisplayGraph";
@@ -11,7 +11,6 @@ export default function DateTrends() {
   const [filter, setFilter] = useState("one-year");
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(0);
-  // const [ month, setMonth] = useState(null)
   function handleSend() {
     // todo handle start > end on client side
     if (filter === "one-year" || filter === "range-years") {
@@ -40,8 +39,6 @@ export default function DateTrends() {
             setEnd(Number(e.target.value));
           }}
         ></input>
-        {/* <label htmlFor='the-month'>Entwr the month</label>
-    <input type='number' name='the-month' min='0' max='12'></input> */}
       </>
     );
   } else if (filter === "range-years") {

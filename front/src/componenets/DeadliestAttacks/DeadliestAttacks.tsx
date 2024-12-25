@@ -1,4 +1,3 @@
-import React, {useState} from 'react'
 import DisplayGraph from '../DisplayGraph/DisplayGraph'
 import useGet from '../../hooks/useGet'
 import { IBar } from '../../Types'
@@ -11,9 +10,9 @@ export default function DeadliestAttacks() {
   return (
     <div>
       <div className="center">
-      <button onClick={e => getData(URL, '')}>submit</button>
+      <button onClick={_ => getData(URL, '')}>submit</button>
       </div>
-      <p>{errMsg}</p>
+      <div className="center"><p>{errMsg}</p></div>
       <DisplayGraph bars={data} height={500} />
     </div>
   )

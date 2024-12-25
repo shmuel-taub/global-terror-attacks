@@ -1,13 +1,13 @@
-import React, {useState, useRef} from 'react'
+import  {useState, useRef} from 'react'
 
 import useGet from '../../hooks/useGet'
-import { IBar, IMarker } from '../../Types'
+import { IBar/*, IMarker*/ } from '../../Types'
 import { BASE_URL } from '../../config/config'
 import DisplayGraph from '../DisplayGraph/DisplayGraph'
 
 const MAIN_URL = BASE_URL + 'api/relationships/top-groups/'
 const GRAPH_URL = MAIN_URL + '?display=graph&'
-const MAP_URL = MAIN_URL + '?display=map&'
+// const MAP_URL = MAIN_URL + '?display=map&'
 const REGIONS_URL = BASE_URL + 'api/getters/get-regions/?'
 
 export default function TopGroups() {

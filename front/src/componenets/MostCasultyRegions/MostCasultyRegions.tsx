@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 
 import DisplayMap from "../DisplayMap/DisplayMap";
 import useGet from "../../hooks/useGet";
